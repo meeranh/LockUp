@@ -1,0 +1,58 @@
+.Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Btn {
+  margin-right: 10px;
+}
+
+form  { display: table;}
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; margin-left: 10px}
+
+.PassForm {
+  width: 20%;
+  border: 1px solid #ccc;
+  margin-top: 2%;
+  margin-right: 10%;
+}
+
+.PassForm h4 {
+  margin-left: 20%;
+  margin-bottom: 10px;
+}
+
+.FormSubmit {
+  margin-left: 150%;
+}
+
+.MainUI {
+  display: flex;
+}
+
+.StoredPass {
+  border: 1px solid #ccc;
+  margin-top: 2%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main *{
+  margin: 0 auto;
+}
+
+.BtnRow {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  text-align: center;
+}
