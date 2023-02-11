@@ -1,11 +1,14 @@
 import PasswordForm from './PasswordForm';
 import StoredPasswords from './StoredPasswords';
+import { PassProvider } from './contexts/PassContext';
 
 const MainUI = () => {
   return (
     <div className="MainUI">
-      <PasswordForm />
-      <StoredPasswords />
+      <PassProvider>
+        <PasswordForm />
+        <StoredPasswords />
+      </PassProvider>
     </div>
   )
 }
