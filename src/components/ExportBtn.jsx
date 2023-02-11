@@ -29,14 +29,12 @@ const ExportBtn = () => {
       }
     })
     const data = JSON.stringify(encryptedPasswords);
-    console.log(data)
-    const blob = new Blob([data], { type: 'application/json' });
+    const blob = new Blob([data], { type: 'application/lockup' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.download = 'passwords.json';
+    link.download = 'passwords.lockup';
     link.href = url;
     link.click();
-
   }
 
   return (
