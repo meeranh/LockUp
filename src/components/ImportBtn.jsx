@@ -4,7 +4,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 import CryptoJs from 'crypto-js';
 
 const ImportBtn = () => {
-  const { newPassword, allPasswords } = useContext(PassContext);
+  const { newPassword, allPasswords, setPassword } = useContext(PassContext);
 
   const decrypt = (hash, masterPass) => {
     const bytes = CryptoJs.AES.decrypt(hash, masterPass);
@@ -29,9 +29,14 @@ const ImportBtn = () => {
         }
         const md5 = Md5.hashStr(masterPassword);
         const data = JSON.parse(content);
+        console.log(data)
         if (data.md5 === md5) {
           data.passwords.forEach(credential => {
-            newPassword(decrypt(credential.email, masterPassword), decrypt(credential.password, masterPassword));
+            setPassword(prev => [...prev, {
+              email: decrypt(credential.email, masterPassword),
+              password: decrypt(credential.password, masterPassword)
+            }])
+            console.log(decrypt(credential.email, masterPassword), decrypt(credential.password, masterPassword));
           })
         } else {
           alert('Wrong master password');

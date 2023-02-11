@@ -17,7 +17,8 @@ export function PassProvider({ children }) {
     <PassContext.Provider value={{
       allPasswords: userPasswords,
       newPassword: addNewPassword,
-      deletePassword: deletePassword
+      deletePassword: deletePassword,
+      setPassword: setUserPasswords
     }}>
       {children}
     </PassContext.Provider>
