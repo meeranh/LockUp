@@ -10,7 +10,7 @@ const PasswordTable = ({ data }) => {
           <th>Actions</th>
         </tr>
         {data.map((item, index) => {
-          return <PasswordLister key={index} email={item.email} password={item.password} />
+          return <PasswordLister key={index} id={index} email={item.email} password={item.password} />
         })}
       </table>
     </div>

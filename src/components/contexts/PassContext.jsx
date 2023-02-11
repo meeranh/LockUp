@@ -9,10 +9,15 @@ export function PassProvider({ children }) {
     setUserPasswords([...userPasswords, { email: newEmail, password: newPassword }]);
   }
 
+  const deletePassword = (id) => {
+    setUserPasswords(userPasswords.filter((_, index) => index !== id));
+  }
+
   return (
     <PassContext.Provider value={{
       allPasswords: userPasswords,
-      newPassword: addNewPassword
+      newPassword: addNewPassword,
+      deletePassword: deletePassword
     }}>
       {children}
     </PassContext.Provider>
