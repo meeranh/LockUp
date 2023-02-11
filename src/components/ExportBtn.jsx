@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
-import jsSHA from 'jssha';
+import { Md5 } from 'ts-md5/dist/md5';
+import CryptoJs from 'crypto-js';
 
 const ExportBtn = () => {
   const { allPasswords } = useContext(PassContext);
@@ -13,21 +14,25 @@ const ExportBtn = () => {
   }
 
   const encrypt = (text, key) => {
-    const shaObj = new jsSHA("SHA-512", "TEXT");
-    shaObj.setHMACKey(key, "TEXT");
-    shaObj.update(text);
-    console.log(shaObj.getHMAC("HEX"))
-    return shaObj.getHMAC("HEX");
+    // Encrypt the text with the key using cryptojs
+    const bytes = CryptoJs.enc.Utf8.parse(text);
+    const encrypted = CryptoJs.AES.encrypt(bytes, key).toString();
+    return encrypted;
   }
 
   const exportFunction = () => {
     const masterPassword = reqMasterPassword();
-    const encryptedPasswords = allPasswords.map(credential => {
+    let encryptedPasswords = allPasswords.map(credential => {
       return {
         email: encrypt(credential.email, masterPassword),
-        password: encrypt(credential.password, masterPassword)
+        password: encrypt(credential.password, masterPassword),
       }
     })
+    encryptedPasswords = {
+      md5: Md5.hashStr(masterPassword),
+      passwords: encryptedPasswords
+    }
+    console.log(encryptedPasswords);
     const data = JSON.stringify(encryptedPasswords);
     const blob = new Blob([data], { type: 'application/lockup' });
     const url = URL.createObjectURL(blob);
