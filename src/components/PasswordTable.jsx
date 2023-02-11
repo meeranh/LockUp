@@ -7,6 +7,7 @@ const PasswordTable = ({ data }) => {
         <tr>
           <th>Email</th>
           <th>Password</th>
+          <th>Actions</th>
         </tr>
         {data.map((item, index) => {
           return <PasswordLister key={index} email={item.email} password={item.password} />
