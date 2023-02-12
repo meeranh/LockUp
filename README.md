@@ -2,6 +2,20 @@
 A web-based password manager that does not depend on an external server
 <img width="960" alt="LockUp" src="https://user-images.githubusercontent.com/102342274/217859618-e0ef937b-0ea0-4667-b3ad-bed7ca91e991.png">
 
+## File structure
+
+```
+src                                 -> Source code
+└── components                      -> React components
+     ├── contexts                   -> React contexts
+     ├── controlButtons             -> Buttons such as Load, Export, Import, etc
+     ├── dataInputUI                -> UI where the credentials are recieved (forms, etc..)
+     ├── dataOutputUI               -> UI where the credentials are output (password table, etc..)
+     └── functions                  -> Core functions of this password manager
+          ├── cryptography          -> Encryption / decryption related functions
+          ├── fileManagement        -> File importing / exporting related functions
+          └── passwordUtilities     -> Functions for generating / validating passwords
+```
 
 ## How it works
 
