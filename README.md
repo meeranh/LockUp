@@ -14,7 +14,7 @@ A web-based password manager that does not depend on an external server
 
 * To save the passwords for later use, the user must export them to an encrypted .lockup file.
 * The user clicks on "Export" and is prompted to provide a master password for encryption.
-* The list of stored passwords is stringified, encrypted using SHA-512 encryption with the provided master password, and saved as a JSON format in the .lockup file.
+* The list of stored passwords is stringified, encrypted using AES encryption with the provided master password, and saved as a JSON format in the .lockup file.
 * The .lockup file includes the following:
   * MD5: The checksum of the master password.
   * HASH: The encrypted string of the stored passwords.
