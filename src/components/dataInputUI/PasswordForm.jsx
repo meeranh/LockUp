@@ -4,13 +4,17 @@ import PassContext from '../contexts/PassContext';
 import generatePassword from '../functions/passwordUtilities/GeneratePassword';
 
 const PasswordForm = () => {
-  const { register, handleSubmit, setValue } = useForm();
   const { newPassword } = useContext(PassContext);
 
+  // Using React-Form for form management
+  const { register, handleSubmit, setValue } = useForm();
+
+  // Newly entered credentials will be saved to global context when submitted
   const handleSave = (e) => {
     newPassword(e.email, e.password);
   }
 
+  // A random password will be generated and sent to the password field
   const setRandomPassword = () => {
     const randomPassword = generatePassword();
     setValue('password', randomPassword);

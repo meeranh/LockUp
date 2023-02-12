@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import PasswordTable from './PasswordTable';
 import PassContext from '../contexts/PassContext';
 
+// If no passwords are available "No passwords stored" will be displayed, else, they will be passed as props
 const StoredPasswords = () => {
   const { allPasswords } = useContext(PassContext);
 

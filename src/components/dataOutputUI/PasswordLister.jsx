@@ -2,9 +2,11 @@ import { useContext } from 'react';
 import PassContext from '../contexts/PassContext';
 import togglePassword from '../functions/passwordUtilities/TogglePassword';
 
+// Props passed as Email, Password, and Id will be destructured
 const PasswordLister = ({ email, password, id }) => {
   const { deletePassword } = useContext(PassContext);
 
+  // Passwords will be hidden by stars until clicked
   return (
     <>
       <tr>

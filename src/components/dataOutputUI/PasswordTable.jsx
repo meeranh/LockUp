@@ -1,5 +1,6 @@
 import PasswordLister from './PasswordLister';
 
+// An array of emails and passwords will be taken as props and passed onto PasswordLister for iteration
 const PasswordTable = ({ data }) => {
   return (
     <table className="UserData" border="1">

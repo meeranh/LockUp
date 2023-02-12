@@ -2,8 +2,15 @@ import requestMasterPassword from '../passwordUtilities/RequestMasterPassword';
 import encryptionForExport from '../EncryptionForExport';
 import saveAsJson from './SaveAsJson';
 
+// Saves an encrypted store of emails and passwords as a JSON file
 export default function exportToFile(arrayOfPasswords) {
+
+  // Asks the user for a master password
   const masterPassword = requestMasterPassword();
+
+  // The emails and passwords will be encrypted using the master password
   const data = encryptionForExport(arrayOfPasswords, masterPassword)
+
+  // The encrypted emails and passwords will be exported as a JSON file
   saveAsJson(data);
 }
