@@ -1,6 +1,6 @@
-import DataBody from './PasswordTable';
-import PassContext from './contexts/PassContext';
 import { useContext } from 'react';
+import PasswordTable from './PasswordTable';
+import PassContext from '../contexts/PassContext';
 
 const StoredPasswords = () => {
   const { allPasswords } = useContext(PassContext);
@@ -9,7 +9,7 @@ const StoredPasswords = () => {
     <div className="StoredPass">
       <h4>All recorded passwords</h4>
       <br />
-      {allPasswords.length == 0 ? <p>No passwords stored</p> : <DataBody data={allPasswords} />}
+      {allPasswords.length == 0 ? <p>No passwords stored</p> : <PasswordTable data={allPasswords} />}
     </div>
   )
 }

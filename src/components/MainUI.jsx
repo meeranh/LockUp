@@ -1,5 +1,5 @@
-import PasswordForm from './PasswordForm';
-import StoredPasswords from './StoredPasswords';
+import PasswordForm from './dataInputUI/PasswordForm';
+import StoredPasswords from './dataOutputUI/StoredPasswords';
 
 const MainUI = () => {
   return (

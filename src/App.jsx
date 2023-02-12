@@ -1,5 +1,5 @@
 import Logo from './components/Logo';
-import ImportExportBtn from './components/ImportExportBtn';
+import TopButtons from './components/TopButtons';
 import MainUI from './components/MainUI';
 import { PassProvider } from './components/contexts/PassContext';
 
@@ -8,7 +8,7 @@ function App() {
     <main className="Interface">
       <Logo />
       <PassProvider>
-        <ImportExportBtn />
+        <TopButtons />
         <MainUI />
       </PassProvider>
     </main>

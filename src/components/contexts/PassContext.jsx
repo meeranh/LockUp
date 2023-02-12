@@ -6,7 +6,9 @@ export function PassProvider({ children }) {
   const [userPasswords, setUserPasswords] = useState([]);
 
   const addNewPassword = (newEmail, newPassword) => {
-    setUserPasswords([...userPasswords, { email: newEmail, password: newPassword }]);
+    setUserPasswords(
+      [...userPasswords, { email: newEmail, password: newPassword }]
+    );
   }
 
   const deletePassword = (id) => {
