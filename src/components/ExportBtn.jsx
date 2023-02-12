@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
-import { Md5 } from 'ts-md5/dist/md5';
+import CryptoJs from 'crypto-js';
 import encrypt from './Security/Encrypt';
 
 const ExportBtn = () => {
@@ -22,7 +22,7 @@ const ExportBtn = () => {
       }
     })
     encryptedPasswords = {
-      md5: Md5.hashStr(masterPassword),
+      md5: CryptoJs.MD5(masterPassword).toString(),
       passwords: encryptedPasswords
     }
     console.log(encryptedPasswords);

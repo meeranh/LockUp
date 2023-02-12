@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
-import { Md5 } from 'ts-md5/dist/md5';
+import CryptoJs from 'crypto-js';
 import decrypt from './Security/Decrypt';
 
 const ImportBtn = () => {
@@ -21,7 +21,8 @@ const ImportBtn = () => {
         if (masterPassword == null) {
           return null;
         }
-        const md5 = Md5.hashStr(masterPassword);
+        const md5 = CryptoJs.MD5(masterPassword).toString();
+        console.log(md5)
         const data = JSON.parse(content);
         console.log(data)
         if (data.md5 === md5) {
