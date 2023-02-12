@@ -12,16 +12,20 @@ A web-based password manager that does not depend on an external server
 
 ### **Exporting and Encrypting Passwords:**
 
-* To save the passwords for later use, the user must export them to an encrypted .lockup file.
+* To save the passwords for later use, the user must export them to an encrypted .json file.
 * The user clicks on "Export" and is prompted to provide a master password for encryption.
-* The list of stored passwords is stringified, encrypted using AES encryption with the provided master password, and saved as a JSON format in the .lockup file.
-* The .lockup file includes the following:
+* The list of stored passwords is stringified, encrypted using AES encryption with the provided master password, and saved as a .json file.
+* The .json file includes the following:
   * MD5: The checksum of the master password.
-  * HASH: The encrypted string of the stored passwords.
+  * HASH: The encrypted key-value pair of the stored passwords and emails.
 
 ### **Importing and Decrypting Passwords:**
 
-* To import a set of passwords, the user clicks on "Import" and uploads a .lockup file along with the master password.
-* The MD5 of the .lockup file is compared to the checksum of the provided master password.
-* If both match, the password is used to decrypt the HASH in the .lockup file.
-* The decrypted passwords are parsed as JSON and the user's email-password pairs are displayed.
+* To import a set of passwords, the user clicks on "Import" and uploads a .json file along with the master password.
+* The MD5 in the .json file is compared with the MD5 hash of the provided master password.
+* If both match, the master password is used to decrypt the HASH in the .json file.
+
+### **Saving credentials to local storage:**
+
+* Encrypted passwords and emails will be stored to local storage and can be loaded back easily
+* This works by writing the stringified JSON of the encrypted passwords and emails to local storage
