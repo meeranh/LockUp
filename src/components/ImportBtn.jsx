@@ -1,16 +1,10 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
 import { Md5 } from 'ts-md5/dist/md5';
-import CryptoJs from 'crypto-js';
+import decrypt from './Security/Decrypt';
 
 const ImportBtn = () => {
-  const { newPassword, allPasswords, setPassword } = useContext(PassContext);
-
-  const decrypt = (hash, masterPass) => {
-    const bytes = CryptoJs.AES.decrypt(hash, masterPass);
-    const originalText = bytes.toString(CryptoJs.enc.Utf8);
-    return originalText;
-  }
+  const { setPassword } = useContext(PassContext);
 
   const importFunction = () => {
     const fileInput = document.createElement('input');

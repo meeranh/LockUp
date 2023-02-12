@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
 import { Md5 } from 'ts-md5/dist/md5';
-import CryptoJs from 'crypto-js';
+import encrypt from './Security/Encrypt';
 
 const ExportBtn = () => {
   const { allPasswords } = useContext(PassContext);
@@ -11,13 +11,6 @@ const ExportBtn = () => {
       return null;
     }
     return masterPassword;
-  }
-
-  const encrypt = (text, key) => {
-    // Encrypt the text with the key using cryptojs
-    const bytes = CryptoJs.enc.Utf8.parse(text);
-    const encrypted = CryptoJs.AES.encrypt(bytes, key).toString();
-    return encrypted;
   }
 
   const exportFunction = () => {

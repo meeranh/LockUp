@@ -1,9 +1,9 @@
 import PassContext from './contexts/PassContext';
-import { useContext, useRef } from 'react';
+import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
 const PasswordForm = () => {
-  const { register, control, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm();
   const { newPassword } = useContext(PassContext);
 
   const handleSave = (e) => {
