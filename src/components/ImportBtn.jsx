@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
 import CryptoJs from 'crypto-js';
-import decrypt from './Security/Decrypt';
+import decrypt from './security/Decrypt';
 
 const ImportBtn = () => {
   const { setPassword } = useContext(PassContext);
@@ -31,7 +31,6 @@ const ImportBtn = () => {
               email: decrypt(credential.email, masterPassword),
               password: decrypt(credential.password, masterPassword)
             }])
-            console.log(decrypt(credential.email, masterPassword), decrypt(credential.password, masterPassword));
           })
         } else {
           alert('Wrong master password');

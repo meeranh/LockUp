@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import PassContext from './contexts/PassContext';
 import CryptoJs from 'crypto-js';
-import encrypt from './Security/Encrypt';
+import encrypt from './security/Encrypt';
 
 const ExportBtn = () => {
   const { allPasswords } = useContext(PassContext);
