@@ -1,5 +1,7 @@
 import ImportBtn from './ImportBtn';
 import ExportBtn from './ExportBtn'
+import SaveLocal from './SaveToLocalStorage';
+import LoadLocal from './LoadFromLocalStorage';
 
 const ImportExportBtn = () => {
   return (
@@ -7,6 +9,8 @@ const ImportExportBtn = () => {
       <center>
         <ImportBtn />
         <ExportBtn />
+        <SaveLocal />
+        <LoadLocal />
       </center>
     </div>
   )
