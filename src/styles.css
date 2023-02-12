@@ -12,7 +12,7 @@
 form  { display: table;}
 p     { display: table-row;  }
 label { display: table-cell; }
-input { display: table-cell; margin-left: 10px}
+input { display: table-cell;}
 
 .PassForm {
   width: 20%;

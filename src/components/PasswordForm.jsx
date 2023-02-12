@@ -3,11 +3,21 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 
 const PasswordForm = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   const { newPassword } = useContext(PassContext);
 
   const handleSave = (e) => {
     newPassword(e.email, e.password);
+  }
+
+  const generatePassword = () => {
+    const length = 16;
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    let retVal = "";
+    for (let i = 0, n = charset.length; i < length; ++i) {
+      retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    setValue('password', retVal);
   }
 
   return (
@@ -24,8 +34,11 @@ const PasswordForm = () => {
           <input type="password" {...register('password')} />
         </p>
         <br />
-        <input type="submit" className="FormSubmit" />
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <input type="submit" className="FormSubmit" />
+        </div>
       </form>
+      <button onClick={() => {generatePassword()}}>Generate</button>
     </div>
   )
 }
