@@ -3,62 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* centering the contents of the header */
-header * {
-  text-align: center;
-}
-
-/* making sure that the input form and the password list is side-by-side */
-main {
-  width: 100%;
-}
-
-/* styling and centering h4 elements  */
-h4 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-/* styling the password form, its buttons, and its fields */
-.inputForm {
-  width: 20%;
-  height: 20%;
-  padding: 10px;
-  border: 1px solid black;
-}
-
-.formInputFields {
-  width: 100%;
-  clear: both;
-}
-
-.formInputFields input {
-  width: 90%;
-  clear: both;
-}
-
-.formButtons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.formButtons * {
-  margin-right: 10%;
-}
-
 /* formatting the table that lists the passwords */
 .passwordList {
   width: 60%;
   padding: 10px;
 }
 
-table {
-  width: 100%;
-  text-align: center;
-}
-
+/* preventing the emails from going past their columns */
 td, th {
   word-wrap: break-word;
   max-width: 150px;
