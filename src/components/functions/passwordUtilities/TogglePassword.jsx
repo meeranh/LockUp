@@ -7,6 +7,13 @@ export default function togglePassword(e) {
     // If reveal was 'false' it will be toggled to 'true' and password will be revealed
     e.target.innerHTML = e.target.getAttribute('password');
     e.target.setAttribute('reveal', 'true');
+
+    // The password will be hidden in 5 seconds
+    setTimeout(() => {
+      e.target.innerHTML = '******';
+      e.target.setAttribute('reveal', 'false');
+    }, 5000);
+
   } else {
 
     // Else, the opposite

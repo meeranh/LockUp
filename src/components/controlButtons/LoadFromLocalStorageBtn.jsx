@@ -7,9 +7,18 @@ const LoadFromLocalStorageBtn = () => {
   const { setPassword } = useContext(PassContext);
   const data = localStorage.getItem('passwords');
 
+  const checkForData = () => {
+    if (data) {
+      return true;
+    } else {
+      alert('No passwords found in local storage');
+      return false;
+    }
+  }
+
   return (
     // Passwords stored in local storage will be decrypted and loaded when clicked
-    <button onClick={() => decryptionForImport(data, setPassword)}>
+    <button onClick={() => checkForData() && decryptionForImport(data, setPassword)}>
       Import from local storage
     </button>
   )
