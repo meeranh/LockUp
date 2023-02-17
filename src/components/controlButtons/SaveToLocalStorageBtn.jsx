@@ -21,7 +21,7 @@ const SaveToLocalStorageBtn = () => {
 
   return (
     <button onClick={() => saveLocally()}>
-      Save
+      Export to local storage
     </button>
   )
 }

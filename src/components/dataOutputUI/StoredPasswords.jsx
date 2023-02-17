@@ -7,11 +7,11 @@ const StoredPasswords = () => {
   const { allPasswords } = useContext(PassContext);
 
   return (
-    <div className="StoredPass">
+    <section className="passwordList">
       <h4>All recorded passwords</h4>
-      <br />
-      {allPasswords.length == 0 ? <p>No passwords stored</p> : <PasswordTable data={allPasswords} />}
-    </div>
+      {allPasswords.length == 0 ? 
+        <h5 className="emptyPlaceholder">No passwords stored</h5> : <PasswordTable data={allPasswords} />}
+    </section>
   )
 }
 

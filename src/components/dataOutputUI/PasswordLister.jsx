@@ -11,8 +11,8 @@ const PasswordLister = ({ email, password, id }) => {
     <>
       <tr>
         <td>{email}</td>
-        <td password={password} reveal='false' onClick={(e) => {togglePassword(e)}}>******</td>
-        <td style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <td password={password} reveal='false' onClick={(e) => { togglePassword(e) }}>******</td>
+        <td className="actionButtons">
           <button onClick={() => navigator.clipboard.writeText(password)}>Copy</button>
           <button onClick={() => deletePassword(id)}>Delete</button>
         </td>

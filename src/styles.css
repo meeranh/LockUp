@@ -1,58 +1,83 @@
-.Logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+/* centering the contents of the header */
+header * {
+  text-align: center;
 }
 
-.Btn {
+/* making sure that the input form and the password list is side-by-side */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* styling and centering h4 elements  */
+h4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* styling button positions */
+.topButtons {
+  margin-bottom: 10px;
+}
+
+.topButtons * {
   margin-right: 10px;
 }
 
-form  { display: table;}
-p     { display: table-row;  }
-label { display: table-cell; }
-input { display: table-cell;}
-
-.PassForm {
+/* styling the password form, its buttons, and its fields */
+.inputForm {
   width: 20%;
-  border: 1px solid #ccc;
-  margin-top: 2%;
+  height: 20%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.formInputFields {
+  width: 100%;
+  clear: both;
+}
+
+.formInputFields input {
+  width: 90%;
+  clear: both;
+}
+
+.formButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formButtons * {
   margin-right: 10%;
 }
 
-.PassForm h4 {
-  margin-left: 20%;
-  margin-bottom: 10px;
-}
-
-.FormSubmit {
-  margin-left: 150%;
-}
-
-.MainUI {
-  display: flex;
-}
-
-.StoredPass {
-  border: 1px solid #ccc;
-  margin-top: 2%;
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main *{
-  margin: 0 auto;
-}
-
-.BtnRow {
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* formatting the table that lists the passwords */
+.passwordList {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 table {
+  width: 100%;
   text-align: center;
+}
+
+td, th {
+  word-wrap: break-word;
+  max-width: 150px;
+}
+
+/* making sure that there is a gap between the 'Copy' and 'Delete' buttons */
+.actionButtons * {
+  margin-right: 10px;
+}
+
+/* formatting the element that shows when no passwords are entered */
+.emptyPlaceholder {
+  text-align: center;
+  margin-top: 5%;
 }

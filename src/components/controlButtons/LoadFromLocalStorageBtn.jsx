@@ -10,7 +10,7 @@ const LoadFromLocalStorageBtn = () => {
   return (
     // Passwords stored in local storage will be decrypted and loaded when clicked
     <button onClick={() => decryptionForImport(data, setPassword)}>
-      Load
+      Import from local storage
     </button>
   )
 }

@@ -5,14 +5,12 @@ import LoadLocalBtn from './controlButtons/LoadFromLocalStorageBtn';
 
 const TopButtons = () => {
   return (
-    <div className="BtnRow">
-      <center>
-        <ImportBtn />
-        <ExportBtn />
-        <SaveLocalBtn />
-        <LoadLocalBtn />
-      </center>
-    </div>
+    <section className="topButtons">
+      <ImportBtn />
+      <LoadLocalBtn />
+      <ExportBtn />
+      <SaveLocalBtn />
+    </section>
   )
 }
 

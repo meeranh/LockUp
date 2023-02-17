@@ -3,10 +3,10 @@ import StoredPasswords from './dataOutputUI/StoredPasswords';
 
 const MainUI = () => {
   return (
-    <div className="MainUI">
+    <main>
       <PasswordForm />
       <StoredPasswords />
-    </div>
+    </main>
   )
 }
 

@@ -7,8 +7,8 @@ const ExportBtn = () => {
 
   return (
     // Exporting all passwords to an encrypted JSON file when clicked
-    <button className="Btn" onClick={() => exportToFile(allPasswords)}>
-      Export
+    <button onClick={() => exportToFile(allPasswords)}>
+      Export to file
     </button>
   )
 }

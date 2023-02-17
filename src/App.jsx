@@ -5,13 +5,13 @@ import { PassProvider } from './components/contexts/PassContext';
 
 function App() {
   return (
-    <main className="Interface">
-      <Logo />
-      <PassProvider>
+    <PassProvider>
+      <header>
+        <Logo />
         <TopButtons />
-        <MainUI />
-      </PassProvider>
-    </main>
+      </header>
+      <MainUI />
+    </PassProvider>
   )
 }
 
