@@ -56,7 +56,7 @@ h4 {
 
 /* formatting the table that lists the passwords */
 .passwordList {
-  width: 40%;
+  width: 50%;
   padding: 10px;
   border: 1px solid black;
 }
