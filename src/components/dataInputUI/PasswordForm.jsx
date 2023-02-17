@@ -21,20 +21,31 @@ const PasswordForm = () => {
   }
 
   return (
-    <form className="inputForm" onSubmit={handleSubmit(handleSave)}>
-      <h4>Store a new password</h4>
-      <section className="formInputFields">
-        <label htmlFor="email">Email: </label>
-        <input type="email" {...register('email')} required /><br />
-        <label htmlFor="password">Password: </label>
-        <input type="password" {...register('password')} required /><br />
-      </section>
-      <br />
-      <section className="formButtons">
-        <input type="submit" value="Store" />
-        <button onClick={() => { setRandomPassword() }}>Generate</button>
-      </section>
-    </form>
+    <div className="w-full max-w-xs">
+      <form className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit(handleSave)}>
+        <div className="mb-4">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
+            Email / Username
+          </label>
+          <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="email" type="text" placeholder="Username" {...register('email')} />
+        </div>
+        <div className="mb-6">
+          <label className="block text-white text-sm font-bold mb-2" htmlFor="password">
+            Password
+          </label>
+          <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="password" type="password" placeholder="******************" {...register('password')} />
+          <p className="text-red-400 text-xs italic">Please choose a password.</p>
+        </div>
+        <div className="flex items-center justify-between">
+          <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Store
+          </button>
+          <a className="inline-block align-baseline font-bold text-sm text-yellow-500 hover:text-yellow-800" href="#" onClick={() => { setRandomPassword() }} >
+            Generate Password
+          </a>
+        </div>
+      </form>
+    </div>
   )
 }
 

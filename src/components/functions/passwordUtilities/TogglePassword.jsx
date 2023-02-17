@@ -8,16 +8,16 @@ export default function togglePassword(e) {
     e.target.innerHTML = e.target.getAttribute('password');
     e.target.setAttribute('reveal', 'true');
 
-    // The password will be hidden in 5 seconds
+    // The password will be hidden in 3 seconds
     setTimeout(() => {
-      e.target.innerHTML = '******';
+      e.target.innerHTML = '************';
       e.target.setAttribute('reveal', 'false');
-    }, 5000);
+    }, 3000);
 
   } else {
 
     // Else, the opposite
-    e.target.innerHTML = '******';
+    e.target.innerHTML = '************';
     e.target.setAttribute('reveal', 'false');
   }
 }

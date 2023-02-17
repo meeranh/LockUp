@@ -8,9 +8,8 @@ const StoredPasswords = () => {
 
   return (
     <section className="passwordList">
-      <h4>All recorded passwords</h4>
       {allPasswords.length == 0 ? 
-        <h5 className="emptyPlaceholder">No passwords stored</h5> : <PasswordTable data={allPasswords} />}
+        <div className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4"><h5 className="emptyPlaceholder font-bold text-white">No passwords stored, start typing some passwords and they will appear here</h5></div> : <PasswordTable data={allPasswords} />}
     </section>
   )
 }

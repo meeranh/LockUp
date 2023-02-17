@@ -3,7 +3,7 @@ import StoredPasswords from './dataOutputUI/StoredPasswords';
 
 const MainUI = () => {
   return (
-    <main>
+    <main className="md:flex justify-around">
       <PasswordForm />
       <StoredPasswords />
     </main>

@@ -20,7 +20,7 @@ const SaveToLocalStorageBtn = () => {
   }
 
   return (
-    <button onClick={() => saveLocally()}>
+    <button onClick={() => saveLocally()} className="text-white font-bold hover:text-yellow-400">
       Export to local storage
     </button>
   )

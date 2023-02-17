@@ -11,8 +11,6 @@ header * {
 /* making sure that the input form and the password list is side-by-side */
 main {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
 }
 
 /* styling and centering h4 elements  */
@@ -20,15 +18,6 @@ h4 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-/* styling button positions */
-.topButtons {
-  margin-bottom: 10px;
-}
-
-.topButtons * {
-  margin-right: 10px;
 }
 
 /* styling the password form, its buttons, and its fields */
@@ -61,9 +50,8 @@ h4 {
 
 /* formatting the table that lists the passwords */
 .passwordList {
-  width: 50%;
+  width: 60%;
   padding: 10px;
-  border: 1px solid black;
 }
 
 table {
@@ -84,5 +72,4 @@ td, th {
 /* formatting the element that shows when no passwords are entered */
 .emptyPlaceholder {
   text-align: center;
-  margin-top: 5%;
 }

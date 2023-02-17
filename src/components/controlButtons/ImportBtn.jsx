@@ -7,7 +7,7 @@ const ImportBtn = () => {
 
   return (
     // Importing passwords from an encrypted JSON file
-    <button onClick={() => importFromFile(setPassword)}>
+    <button onClick={() => importFromFile(setPassword)} className="text-white font-bold hover:text-yellow-400">
       Import from file
     </button>
   )
