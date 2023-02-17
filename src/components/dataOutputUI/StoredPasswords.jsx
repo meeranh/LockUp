@@ -7,7 +7,7 @@ const StoredPasswords = () => {
   const { allPasswords } = useContext(PassContext);
 
   return (
-    <section className="passwordList">
+    <section className="passwordList mx-auto">
       {allPasswords.length == 0 ? 
         <div className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4"><h5 className="emptyPlaceholder font-bold text-white">No passwords stored, start typing some passwords and they will appear here</h5></div> : <PasswordTable data={allPasswords} />}
     </section>
