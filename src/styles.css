@@ -1,3 +1,8 @@
+/* importing the Tailwind CSS framework */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* centering the contents of the header */
 header * {
   text-align: center;
