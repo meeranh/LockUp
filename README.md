@@ -1,6 +1,6 @@
 # **LockUp: A Secure Web-Based Password Manager (Work in progress)**
 A web-based password manager that does not depend on an external server
-<img width="960" alt="LockUp" src="https://user-images.githubusercontent.com/102342274/217859618-e0ef937b-0ea0-4667-b3ad-bed7ca91e991.png">
+<img width="960" alt="LockUp" src="https://user-images.githubusercontent.com/102342274/219704812-3bd042ce-b242-435c-8010-b292acb47fd3.png">
 
 ## File structure
 
