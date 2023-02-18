@@ -1,7 +1,7 @@
 import decryptionForImport from '../DecryptionForImport';
 
 // An encrypted JSON file will be decrypted and loadaed
-export default function importFromFile(setPassword) {
+export default function importFromFile(setPassword, masterPassword) {
 
   // Preparing to recieve and read a JSON file 
   const fileInput = document.createElement('input');
@@ -20,7 +20,7 @@ export default function importFromFile(setPassword) {
       const content = readerEvent.target.result;
 
       // The JSON file will be sent for decryption
-      decryptionForImport(content, setPassword);
+      decryptionForImport(content, setPassword, masterPassword);
     }
   }
 }

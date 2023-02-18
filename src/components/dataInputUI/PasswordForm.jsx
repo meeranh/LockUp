@@ -40,9 +40,9 @@ const PasswordForm = () => {
           <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
             Store
           </button>
-          <a className="inline-block align-baseline font-bold text-sm text-yellow-500 hover:text-yellow-800" href="#" onClick={() => { setRandomPassword() }} >
+          <button className="inline-block align-baseline font-bold text-sm text-yellow-500 hover:text-yellow-800" href="#" onClick={(e) => { setRandomPassword(); e.preventDefault() }} >
             Generate Password
-          </a>
+          </button>
         </div>
       </form>
     </div>
