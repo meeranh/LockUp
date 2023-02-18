@@ -8,6 +8,11 @@ export default function exportToFile(arrayOfPasswords) {
   // Asks the user for a master password
   const masterPassword = requestMasterPassword();
 
+  // Do nothing if no password is supplied
+  if (masterPassword == null) {
+    return
+  }
+
   // The emails and passwords will be encrypted using the master password
   const data = encryptionForExport(arrayOfPasswords, masterPassword)
 

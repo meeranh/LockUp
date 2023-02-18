@@ -2,7 +2,8 @@
 export default function requestMasterPassword() {
   const masterPassword = prompt('Enter master password');
   if (masterPassword == null) {
-    return null;
+    alert('Master password cannot be empty');
+    return
   }
   return masterPassword;
 }
