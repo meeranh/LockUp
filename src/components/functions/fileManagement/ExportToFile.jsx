@@ -1,4 +1,3 @@
-import requestMasterPassword from '../passwordUtilities/RequestMasterPassword';
 import encryptionForExport from '../EncryptionForExport';
 import saveAsJson from './SaveAsJson';
 

@@ -9,7 +9,6 @@ export default function decryptionForImport(dataToBeImported, passwordSetter, ma
 
   // The JSON file will be parsed
   const encryptedPasswords = JSON.parse(dataToBeImported);
-  console.log(encryptedPasswords.md5)
 
   // If the value of 'MD5' matches the MD5 hash of the master password
   if (encryptedPasswords.md5 === md5) {

@@ -13,18 +13,14 @@ const RequestMasterPasswordUI = () => {
   const { allPasswords, setPassword } = useContext(PassContext);
 
   const handleSave = (e) => {
-    console.log(e)
     const masterPassword = e.password;
-    console.log(clickedForRef.current.getAttribute('clicked-for'));
     if (clickedForRef.current.getAttribute('clicked-for') === 'ImportFromFile') {
       importFromFile(setPassword, masterPassword);
     } else if (clickedForRef.current.getAttribute('clicked-for') === 'ExportToFile') {
-      console.log(masterPassword)
       exportToFile(allPasswords, masterPassword);
     } else if (clickedForRef.current.getAttribute('clicked-for') === 'SaveToLocalStorage') {
       saveToLocalStorage(allPasswords, masterPassword);
     } else if (clickedForRef.current.getAttribute('clicked-for') === 'LoadFromLocalStorage') {
-      console.log(masterPassword)
       loadFromLocalStorage(masterPassword, setPassword);
     }
     hideMasterPasswordUI();
@@ -32,7 +28,6 @@ const RequestMasterPasswordUI = () => {
 
   // Create event listener to hide the master password UI when the user clicks outside of it
   document.addEventListener('click', (e) => {
-    console.log(e.target.id)
     if (e.target.id === 'modalOverflow') {
       hideMasterPasswordUI();
     }

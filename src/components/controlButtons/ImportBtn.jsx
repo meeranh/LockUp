@@ -1,10 +1,7 @@
-import { useContext } from 'react';
-import PassContext from '../contexts/PassContext';
 import clickedForSetter from '../functions/passwordUtilities/ClickedForSetter';
 import showPasswordPrompt from '../functions/passwordUtilities/ShowPasswordPrompt';
 
 const ImportBtn = () => {
-  const { setPassword } = useContext(PassContext);
 
   return (
     // Importing passwords from an encrypted JSON file

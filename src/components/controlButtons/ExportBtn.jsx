@@ -1,10 +1,7 @@
-import PassContext from '../contexts/PassContext';
-import { useContext } from 'react';
 import clickedForSetter from '../functions/passwordUtilities/ClickedForSetter';
 import showPasswordPrompt from '../functions/passwordUtilities/ShowPasswordPrompt';
 
 const ExportBtn = () => {
-  const { allPasswords } = useContext(PassContext);
 
   return (
     // Exporting all passwords to an encrypted JSON file when clicked
