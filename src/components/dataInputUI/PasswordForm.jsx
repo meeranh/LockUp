@@ -27,13 +27,13 @@ const PasswordForm = () => {
           <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
             Email / Username
           </label>
-          <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="email" type="text" placeholder="Username" {...register('email')} />
+          <input required={true} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="email" type="text" placeholder="Username" {...register('email')} />
         </div>
         <div className="mb-6">
           <label className="block text-white text-sm font-bold mb-2" htmlFor="password">
             Password
           </label>
-          <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="password" type="password" placeholder="******************" {...register('password')} />
+          <input required={true} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="password" type="password" placeholder="******************" {...register('password')} />
           <p className="text-red-400 text-xs italic">Please choose a password.</p>
         </div>
         <div className="flex items-center justify-between">
