@@ -13,8 +13,8 @@ const PasswordLister = ({ email, password, id }) => {
         <td scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white">{email}</td>
         <td className="px-6 py-4 text-center" password={password} reveal='false' onClick={(e) => { togglePassword(e) }}>************</td>
         <td className="actionButtons text-right">
-          <button className="bg-yellow-500 hover:bg-green-600 text-white font-bold py-1 px-2 rounded" onClick={() => navigator.clipboard.writeText(password)}>Copy</button>
-          <button className="bg-yellow-500 hover:bg-green-600 text-white font-bold py-1 px-2 rounded" onClick={() => deletePassword(id)}>Delete</button>
+          <button className="bg-yellow-500 hover:bg-green-600 text-gray-700 font-bold py-1 px-2 rounded" onClick={() => navigator.clipboard.writeText(password)}>Copy</button>
+          <button className="bg-yellow-500 hover:bg-green-600 text-gray-700 font-bold py-1 px-2 rounded" onClick={() => deletePassword(id)}>Delete</button>
         </td>
       </tr>
     </>
