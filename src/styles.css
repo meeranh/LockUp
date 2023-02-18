@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* making sure that the whole viewport is used */
+html, body, #id {
+  height: 100%;
+}
+
 /* formatting the table that lists the passwords */
 .passwordList {
   width: 60%;
