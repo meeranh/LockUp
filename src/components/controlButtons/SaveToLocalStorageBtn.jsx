@@ -5,7 +5,7 @@ import showPasswordPrompt from '../functions/passwordUtilities/ShowPasswordPromp
 const SaveToLocalStorageBtn = () => {
 
   return (
-    <button onClick={() => {clickedForSetter('SaveToLocalStorage') && showPasswordPrompt()}} className="text-white font-bold hover:text-yellow-400">
+    <button onClick={() => {clickedForSetter('SaveToLocalStorage') && showPasswordPrompt()}} className="text-white font-bold hover:bg-red-900 bg-red-600 rounded px-2 py-1 my-2 sm:my-0">
       Export to browser storage
     </button>
   )
