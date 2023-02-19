@@ -8,24 +8,13 @@ html, body, #id {
   height: 100%;
 }
 
-/* formatting the table that lists the passwords */
-.passwordList {
-  width: 60%;
-  padding: 10px;
-}
-
 /* preventing the emails from going past their columns */
 td, th {
   word-wrap: break-word;
-  max-width: 150px;
+  max-width: 300px;
 }
 
 /* making sure that there is a gap between the 'Copy' and 'Delete' buttons */
 .actionButtons * {
   margin-right: 10px;
-}
-
-/* formatting the element that shows when no passwords are entered */
-.emptyPlaceholder {
-  text-align: center;
 }
