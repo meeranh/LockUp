@@ -43,3 +43,7 @@ src                                 -> Source code
 
 * Encrypted passwords and emails will be stored to local storage and can be loaded back easily
 * This works by writing the stringified JSON of the encrypted passwords and emails to local storage
+
+## The Flowchart For LockUp
+![LockUp Flowchart](https://user-images.githubusercontent.com/102342274/233109089-6e68e579-eb5d-4432-9d31-73534a894d56.png)
+
