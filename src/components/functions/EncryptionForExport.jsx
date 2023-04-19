@@ -12,9 +12,9 @@ export default function encryptionForExport(data, masterPassword) {
     }
   })
 
-  // An MD5 of the master password will be appended to the JSON to verify authenticity
+  // An SHA3 of the master password will be appended to the JSON to verify authenticity
   encryptedPasswords = {
-    md5: CryptoJs.MD5(masterPassword).toString(),
+    sha3: CryptoJs.SHA3(masterPassword).toString(),
     passwords: encryptedPasswords
   }
 

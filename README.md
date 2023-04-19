@@ -30,14 +30,14 @@ src                                 -> Source code
 * The user clicks on "Export" and is prompted to provide a master password for encryption.
 * The list of stored passwords is stringified, encrypted using AES encryption with the provided master password, and saved as a .json file.
 * The .json file includes the following:
-  * MD5: The checksum of the master password.
-  * HASH: The encrypted key-value pair of the stored passwords and emails.
+  * SHA3: The checksum of the master password.
+  * PASSWORDS: The encrypted key-value pair of the stored passwords and emails.
 
 ### **Importing and Decrypting Passwords:**
 
 * To import a set of passwords, the user clicks on "Import" and uploads a .json file along with the master password.
-* The MD5 in the .json file is compared with the MD5 hash of the provided master password.
-* If both match, the master password is used to decrypt the HASH in the .json file.
+* The SHA3 in the .json file is compared with the SHA3 hash of the provided master password.
+* If both match, the master password is used to decrypt the PASSWORDS in the .json file.
 
 ### **Saving credentials to local storage:**
 
