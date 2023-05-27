@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://meeranh.github.io/LockUp",
-  "checksum": "U3RvbGVuIEZyb20gTWVlcmFuIEhhc3Nhbg=="
+  "checksum": "U3RvbGVuIEZyb20gTWVlcmFuIEhhc3Nhbg==",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
