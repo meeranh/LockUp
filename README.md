@@ -2,6 +2,8 @@
 A web-based password manager that does not depend on an external server
 <img width="960" alt="LockUp" src="https://user-images.githubusercontent.com/102342274/219704812-3bd042ce-b242-435c-8010-b292acb47fd3.png">
 
+The backend server that integrates LockUp with MongoDB can be found [here](https://github.com/meeranh/LockUpBackend)
+
 ## File structure
 
 ```
